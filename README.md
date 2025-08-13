@@ -1,5 +1,5 @@
 
-# Cómo correr los códigos (resumen)
+# Cómo correr los códigos
 
 - Ejecutar Python
   1. Instalar dependencias:
