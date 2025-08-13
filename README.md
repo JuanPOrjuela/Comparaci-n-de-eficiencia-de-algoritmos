@@ -90,7 +90,10 @@ Sin riesgo de recursión; eficiente para valores moderados.
   - Python: mayor uso base (intérprete + objetos) y crecimiento con n grande.  
   En `memoria vs n`: Python escala más rápido que C.
 
-- Conclusión práctica
-  - Para velocidad vs eficiencia: C iterativo.  
-  - Para factoriales grandes sin librerías externas: Python.  
-  - Evitar recursión en C para n grandes; usar iterativo o multiprecisión si se necesita exactitud para n grandes.
+# limites de cada codigo
+- pythonRecursivo: 998
+- pythonIterativo: 1558
+- CRecursivo: 65
+- CIterativo: 65
+
+Python puede calcular factoriales mucho más grandes porque sus números (int) no tienen un límite fijo y crecen hasta que se acabe la memoria, mientras que en C los números (unsigned long long) solo tienen 64 bits y se desbordan muy rápido (desde ~n=20). Además, en C recursivo te frena el límite de la pila y en Python recursivo el límite de llamadas recursivas, pero el método iterativo en Python llega más lejos porque no depende de eso.
