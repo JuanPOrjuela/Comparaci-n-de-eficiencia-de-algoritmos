@@ -34,7 +34,7 @@ para comparar rendimiento y limites de cada codigo.
 
 #Cómo implementé las funciones
 - C recursivo (`facto_r`)
-```c
+c
 unsigned long long facto_r(int n) {
     if (n==0 || n==1) return 1ULL;
     return (unsigned long long)n * facto_r(n-1);
@@ -43,7 +43,6 @@ unsigned long long facto_r(int n) {
 Riesgo: cada llamada usa pila → *stack overflow* para n relativamente bajos.
 
 - C iterativo (`facto_i`)
-
 unsigned long long facto_i(int n) {
     unsigned long long resultado = 1ULL;
     for (int i=1; i<=n; ++i) resultado *= (unsigned long long)i;
