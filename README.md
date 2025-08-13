@@ -1,8 +1,38 @@
-# Propósito de la tarea
+
+# Cómo correr los códigos (resumen)
+
+- Ejecutar Python
+  1. Instalar dependencias:
+     powershell
+     pip install memory_profiler matplotlib
+     
+  2. Ejecutar:
+     powershell
+     python python
+    recursivo_python.py
+     python python\iterativo_python.py
+     
+- Compilar C (Windows, usando `gcc`)
+  1. Guardar `recursivo_windows.c` y `iterativo_windows.c`.
+  2. Compilar en PowerShell (si `gcc` está en PATH):
+     powershell
+     gcc C
+ecursivo_windows.c -o recursivo.exe -lpsapi
+     gcc C\iterativo_windows.c -o iterativo.exe -lpsapi
+     
+  3. Ejecutar:
+     powershell
+     
+ecursivo.exe
+     .\iterativo.exe
+     
+  4. Introduce el número cuando el programa lo pida.
+
+#Propósito de la tarea
 Comparar algoritmos recursivos e iterativos usando el calculo de factoriales en C y Python. Medir el tiempo de ejecucion y el uso de la memoria para despues mostrarlo en graficas
 para comparar rendimiento y limites de cada codigo.
 
-# Cómo implementé las funciones
+#Cómo implementé las funciones
 - C recursivo (`facto_r`)
 ```c
 unsigned long long facto_r(int n) {
@@ -65,32 +95,3 @@ Sin riesgo de recursión; eficiente para valores moderados.
   - Para velocidad vs eficiencia: C iterativo.  
   - Para factoriales grandes sin librerías externas: Python.  
   - Evitar recursión en C para n grandes; usar iterativo o multiprecisión si se necesita exactitud para n grandes.
-
-# Cómo correr los códigos (resumen)
-
-- Ejecutar Python
-  1. Instalar dependencias:
-     powershell
-     pip install memory_profiler matplotlib
-     
-  2. Ejecutar:
-     powershell
-     python python
-    recursivo_python.py
-     python python\iterativo_python.py
-     
-- Compilar C (Windows, usando `gcc`)
-  1. Guardar `recursivo_windows.c` y `iterativo_windows.c`.
-  2. Compilar en PowerShell (si `gcc` está en PATH):
-     powershell
-     gcc C
-ecursivo_windows.c -o recursivo.exe -lpsapi
-     gcc C\iterativo_windows.c -o iterativo.exe -lpsapi
-     
-  3. Ejecutar:
-     powershell
-     
-ecursivo.exe
-     .\iterativo.exe
-     
-  4. Introduce el número cuando el programa lo pida.
