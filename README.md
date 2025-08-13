@@ -28,11 +28,11 @@ ecursivo.exe
      
   4. Introduce el número cuando el programa lo pida.
 
-#Propósito de la tarea
+# Propósito de la tarea
 Comparar algoritmos recursivos e iterativos usando el calculo de factoriales en C y Python. Medir el tiempo de ejecucion y el uso de la memoria para despues mostrarlo en graficas
 para comparar rendimiento y limites de cada codigo.
 
-#Cómo implementé las funciones
+# Cómo implementé las funciones
 - C recursivo (`facto_r`)
 c
 unsigned long long facto_r(int n) {
@@ -62,7 +62,7 @@ def facto_i(n):
     for i in range(1, n+1): resultado *= i
     return resultado
 
-Sin riesgo de recursión; eficiente para valores moderados.
+Eficiente para valores moderados.
 
 # Métodos usados para medir tiempo y memoria
 
