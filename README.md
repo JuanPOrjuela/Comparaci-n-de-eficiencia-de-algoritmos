@@ -8,25 +8,15 @@
      
   2. Ejecutar:
      powershell
-     python python
-    recursivo_python.py
-     python python\iterativo_python.py
+     - py pythonRecursivo.py
+     - py pythonIterativo.py
      
 - Compilar C (Windows, usando `gcc`)
-  1. Guardar `recursivo_windows.c` y `iterativo_windows.c`.
-  2. Compilar en PowerShell (si `gcc` está en PATH):
-     powershell
-     gcc C
-ecursivo_windows.c -o recursivo.exe -lpsapi
-     gcc C\iterativo_windows.c -o iterativo.exe -lpsapi
+  1. Guardar CRecursivo.c y CIterativo.c
+  2. Ejecutar en PowerShell
+  3. Introduce el número cuando el programa lo pida.
      
-  3. Ejecutar:
-     powershell
-     
-ecursivo.exe
-     .\iterativo.exe
-     
-  4. Introduce el número cuando el programa lo pida.
+**En caso de que no compile bien los codigos de C, tambien compila en C online.
 
 # Propósito de la tarea
 Comparar algoritmos recursivos e iterativos usando el calculo de factoriales en C y Python. Medir el tiempo de ejecucion y el uso de la memoria para despues mostrarlo en graficas
@@ -67,22 +57,22 @@ Eficiente para valores moderados.
 # Métodos usados para medir tiempo y memoria
 
 - Python
-  - Tiempo: `time.perf_counter()` o `time.time()`.
+  - Tiempo: ``time.time()`.
   - Memoria: `memory_profiler.memory_usage
   - Instalar: `pip install memory_profiler matplotlib`.
 
 - C (Windows)
-  - Tiempo: `QueryPerformanceCounter()` / `QueryPerformanceFrequency()` (alta resolución).
-  - Memoria: `GetProcessMemoryInfo()` (Psapi) → `PeakWorkingSetSize` (KB).
-  - Compilación: `gcc file.c -o prog.exe -lpsapi`.
+  - Tiempo: `QueryPerformanceCounter()`.
+  - Memoria: `GetProcessMemoryInfo()`.
+  - Compilación: gcc.
 
 # Resumen comparaciones gráficas
 - Límites y errores
   - C: falla por stack overflow con n relativamente pequeños.
-  - Python recursivo: limitado por `sys.getrecursionlimit()` (≈1000 por defecto) pero sin overflow numérico (limitado por RAM).
+  - Python recursivo: sin overflow numérico (limitado por RAM).
 
 - Rendimiento (tiempo) 
-  Orden típico (menos → más tiempo): C iterativo < C recursivo < Python iterativo < Python recursivo.  
+  Orden (menos → más tiempo): C iterativo < C recursivo < Python iterativo < Python recursivo.  
   En `tiempo vs n`: C iterativo la curva más baja; Python recursivo la más alta.
 
 - Uso de memoria 
